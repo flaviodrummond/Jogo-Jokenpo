@@ -1,4 +1,9 @@
 const result = document.querySelector('.result')
+const myScore = document.querySelector('.humanScore')
+const machineScore = document.querySelector('.scoringMachine')
+
+let humanScore = 0
+let scoringMachine = 0
 
 const playHuman = (humanChoice) => {
     playTheGamer(humanChoice, playMachine())
@@ -15,11 +20,21 @@ const playMachine = () => {
  const playTheGamer = (human, machine) => {
 
     if(human === machine) {
-        result.innerHTML = 'Deu empate'
+
+        result.innerHTML = 'Deu empate !'
+
     } else if(human === 'paper' && machine === 'stone' || human === 'stone' && machine === 'scissors' || human === 'scissors' && machine === 'paper') {
-        result.innerHTML = 'Você Ganhou'
+
+        humanScore++
+        myScore.innerHTML = humanScore
+        result.innerHTML = 'Você Ganhou !'
+
     } else {
-        result.innerHTML = 'Você perdeu'
+
+        scoringMachine++
+        machineScore.innerHTML = scoringMachine
+        result.innerHTML = 'Você perdeu !'
+
     }
 
  }
