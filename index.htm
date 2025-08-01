@@ -1,31 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="/script.js" defer></script>
     <title>Jokenpô</title>
 </head>
+
 <body>
 
     <main class="container">
 
-        <h1 class="title">Jokenpô</h1>
+        <div class="playing">
 
-        <section class="section">
+            <h1 class="title">Joken Pô</h1>
 
-            <button class="stone" onclick="playHuman ('stone')">&#x270A</button>
-            <button class="paper" onclick="playHuman ('paper')">&#x1F590</button>
-            <button class="scissors" onclick="playHuman ('scissors')">&#x270C</button>
+            <div>
+                <span class="user-result">
+                    <img src="./assets/pedra.png" alt="escolha do usuário">
+                </span>
+                <span class="computer-result">
+                    <img src="./assets/pedra.png" alt="escolha do computador">
+                </span>
+            </div>
+            <p class="result-text">Bora Jogar ?</p>
 
-        </section>
+        </div>
 
-        <p class="result"></p>
+        <div class="to-choose">
+            <span class="user-choice">
+                <img src="./assets/pedra.png" alt="Pedra">
+                <p>Pedra</p>
+            </span>
+            <span class="user-choice">
+                <img src="./assets/papel.png" alt="Papel">
+                <p>Papel</p>
+            </span>
+            <span class="user-choice">
+                <img src="./assets/tesoura.png" alt="Tesoura">
+                <p>Tesoura</p>
+            </span>
+        </div>
+        <div class="box">
+            <p class="scoreboard-text">Placar</p>
+            <div class="scoreboard">
+                <div class="play-score">
+                    <p class="myScore">Jogador </p>
+                    <p> <span class="humanScore">0</span></p>
+                </div>
 
-        <p class="myScore">Sua Pontuação: <span class="humanScore">0</span></p>
-        <p class="machineScore">Pontuação da Máquina: <span class="scoringMachine">0</span></p>
+                <div class="machine-score">
+                    <p class="machineScore">CPU </p>
+                    <p><span class="scoringMachine">0</span></p>
+                </div>
+            </div>
+        </div>
     </main>
-    
+
 </body>
+
 </html>
